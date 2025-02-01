@@ -1,5 +1,5 @@
 export const getAllPosts = async () => {
-	const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+	const res = await fetch('/api/posts');
 
 	if (!res.ok) {
 		throw new Error('Failed to fetch data');
@@ -9,9 +9,7 @@ export const getAllPosts = async () => {
 };
 
 export const getPostsBySearch = async (searchTerm: string) => {
-	const res = await fetch(
-		`https://jsonplaceholder.typicode.com/posts?q=${searchTerm}`
-	);
+	const res = await fetch(`/api/posts?q=${searchTerm}`);
 
 	if (!res.ok) {
 		throw new Error('Failed to fetch data');
