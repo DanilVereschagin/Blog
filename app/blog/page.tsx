@@ -1,38 +1,17 @@
-import React from 'react';
-import Link from 'next/link';
-import { Post } from '@/types/types';
+import { PostList } from '@/components/PostList';
+import { PostSearch } from '@/components/PostSearch';
+import { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
 	title: 'Blog',
 };
 
-async function getPosts(): Promise<Post[]> {
-	const res = await fetch('https://jsonplaceholder.typicode.com/posts', {
-		next: {
-			revalidate: 60,
-		},
-	});
-
-	const posts = await res.json();
-
-	if (!res.ok) throw new Error('Failed to fetch posts :(');
-
-	return posts;
-}
-
-async function Blog() {
-	const posts = await getPosts();
-
+function Blog() {
 	return (
 		<div>
 			<h1>Blog</h1>
-			<div className='container'>
-				{posts.map((post: Post) => (
-					<li key={post.id}>
-						<Link href={`/blog/${post.id}`}>{post.title}</Link>
-					</li>
-				))}
-			</div>
+			<PostSearch />
+			<PostList />
 		</div>
 	);
 }
