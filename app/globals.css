@@ -83,8 +83,8 @@ main {
 }
 
 .search__button:hover {
-	background-color: #ffffff;
-	color: #000000;
+	background-color: #353535;
+	color: #ffffff;
 	border: #000000 1px solid;
 }
 
@@ -103,12 +103,91 @@ main {
 	}
 
 	&:hover {
-		background-color: #ffffff;
-		color: #000000;
+		background-color: #353535;
 		border: #000000 1px solid;
 
 		.link {
-			color: #000000;
+			color: #ffffff;
+		}
+	}
+}
+
+.form__auth {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 400px;
+	padding: 20px;
+	gap: 10px;
+	border-radius: 16px;
+	border: 1px solid #000000;
+	margin: auto;
+	background-color: #000000;
+	color: #ffffff;
+
+	div {
+		margin-top: 5px;
+		font-size: 24px;
+	}
+
+	h1 {
+		margin-bottom: 20px;
+		font-size: 46px;
+		color: #ffffff;
+	}
+
+	.button__google {
+		background-color: #000ecf;
+		color: #ffffff;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		padding: 5px 10px;
+		font-size: 24px;
+
+		&:hover {
+			background-color: #ffffff;
+			color: #000ecf;
+			border: #000ecf 1px solid;
+		}
+	}
+}
+
+.form__auth_signin {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 400px;
+	padding: 10px;
+	gap: 10px;
+	border-radius: 4px;
+	margin: auto;
+
+	input {
+		width: 90%;
+		padding: 8px;
+		border-radius: 4px;
+		margin-bottom: 10px;
+		font-size: 20px;
+		background-color: #ffffff;
+	}
+
+	button {
+		width: auto;
+		padding: 8px;
+		border: 1px solid #000000;
+		border-radius: 4px;
+		cursor: pointer;
+		background-color: #ffffff;
+		color: #000000;
+		font-size: 24px;
+
+		&:hover {
+			background-color: #000000;
+			color: #ffffff;
+			border: #ffffff 1px solid;
 		}
 	}
 }

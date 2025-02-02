@@ -20,3 +20,4 @@ Technology stack:
 - Typescript
 - EsLint
 - Zustand v5
+- Next-Auth (Google and Credentials)
