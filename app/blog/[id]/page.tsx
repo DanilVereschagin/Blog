@@ -11,7 +11,11 @@ async function getPost(id: string): Promise<PostType> {
 	return posts;
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({
+	params,
+}: {
+	params: Props;
+}): Promise<Metadata> {
 	const { id } = await params;
 	const post = await getPost(id);
 
@@ -20,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	};
 }
 
-async function Post({ params }: Props) {
+async function Post({ params }: { params: Props }) {
 	const { id } = await params;
 	const post = await getPost(id);
 

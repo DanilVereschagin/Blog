@@ -19,7 +19,7 @@ const PostList = () => {
 	) : (
 		<div className='container'>
 			{posts.map((post: PostType) => (
-				<Post key={post.id} id={post.id} title={post.title} />
+				<Post key={post.id} id={post.id} title={post.title} body={post.body} />
 			))}
 		</div>
 	);

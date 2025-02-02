@@ -1,6 +1,6 @@
-export type Props = {
-	params: { id: string };
-};
+export type Props = Promise<{
+	id: string;
+}>;
 
 export type Post = {
 	id: number;
