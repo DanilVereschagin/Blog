@@ -1,14 +1,13 @@
 import { Metadata } from 'next';
 import { Props, Post as PostType } from '@/types/types';
+import { getPost, getAllPosts } from '@/services/getPosts';
 
-async function getPost(id: string): Promise<PostType> {
-	const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
-		next: {
-			revalidate: 60,
-		},
-	});
-	const posts = await res.json();
-	return posts;
+export async function generateStaticParams() {
+	const posts: PostType[] = await getAllPosts();
+
+	return posts.map((post) => ({
+		slug: post.id.toString(),
+	}));
 }
 
 export async function generateMetadata({

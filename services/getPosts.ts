@@ -1,5 +1,7 @@
+import { Post as PostType } from '@/types/types';
+
 export const getAllPosts = async () => {
-	const res = await fetch('/api/posts');
+	const res = await fetch('https://jsonplaceholder.typicode.com/posts');
 
 	if (!res.ok) {
 		throw new Error('Failed to fetch data');
@@ -9,7 +11,9 @@ export const getAllPosts = async () => {
 };
 
 export const getPostsBySearch = async (searchTerm: string) => {
-	const res = await fetch(`/api/posts?q=${searchTerm}`);
+	const res = await fetch(
+		`https://jsonplaceholder.typicode.com/posts?q=${searchTerm}`
+	);
 
 	if (!res.ok) {
 		throw new Error('Failed to fetch data');
@@ -17,3 +21,13 @@ export const getPostsBySearch = async (searchTerm: string) => {
 
 	return res.json();
 };
+
+export async function getPost(id: string): Promise<PostType> {
+	const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
+		next: {
+			revalidate: 60,
+		},
+	});
+	const posts = await res.json();
+	return posts;
+}
