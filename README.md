@@ -1,17 +1,10 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
 ```bash
+# Development
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Build
+npm run build
+# Start the compiled version
+npm run start
 ```
 
 Technology stack:
@@ -21,3 +14,5 @@ Technology stack:
 - EsLint
 - Zustand v5
 - Next-Auth (Google and Credentials)
+- SSG and IRS
+- Image Optimization
