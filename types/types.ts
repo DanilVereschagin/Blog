@@ -6,6 +6,7 @@ export type Post = {
 	id: number;
 	title: string;
 	body: string;
+	userId: number;
 };
 
 export type Posts = {
@@ -30,4 +31,11 @@ export type UsePosts = {
 	loading: boolean;
 	getAllPosts: () => Promise<void>;
 	getPostsBySearch: (searchTerm: string) => Promise<void>;
+};
+
+export type UserType = {
+	id: string;
+	name: string;
+	email: string;
+	password: string;
 };

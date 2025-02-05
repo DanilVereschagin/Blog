@@ -1,7 +1,7 @@
 import type { AuthOptions, User } from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
 import Credentials from 'next-auth/providers/credentials';
-import { users } from '@/data/users';
+import type { UserType } from '@/types/types';
 
 export const authConfig: AuthOptions = {
 	providers: [
@@ -17,7 +17,11 @@ export const authConfig: AuthOptions = {
 			authorize: async (credentials) => {
 				if (!credentials?.email || !credentials.password) return null;
 
-				const currentUsers = users.find(
+				const users: Promise<UserType[]> = (
+					await fetch('http://localhost:3300/users')
+				).json();
+
+				const currentUsers = (await users).find(
 					(user) => user.email === credentials.email
 				);
 

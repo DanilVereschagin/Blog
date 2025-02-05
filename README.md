@@ -1,3 +1,5 @@
+Command with Next.js:
+
 ```bash
 # Development
 npm run dev
@@ -5,6 +7,13 @@ npm run dev
 npm run build
 # Start the compiled version
 npm run start
+```
+
+Command with json-server:
+
+```bash
+# Start
+npx json-server db.json --port={port}
 ```
 
 Technology stack:
@@ -16,3 +25,4 @@ Technology stack:
 - Next-Auth (Google and Credentials)
 - SSG and IRS
 - Image Optimization
+- JSON-server (Only 0.17.4 because the substring search doesn't work.)
