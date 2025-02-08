@@ -3,10 +3,8 @@ import Link from 'next/link';
 
 export const Post = ({ id, title }: PostType) => {
 	return (
-		<div className='post' key={id}>
-			<Link className='link' href={`/blog/${id}`}>
-				{title}
-			</Link>
-		</div>
+		<Link key={id} className='post link' href={`/blog/${id}`}>
+			{title}
+		</Link>
 	);
 };

@@ -11,6 +11,10 @@ const navItems: NavLink[] = [
 		label: 'Blog',
 	},
 	{
+		href: '/blog/new',
+		label: 'New Post',
+	},
+	{
 		href: '/about',
 		label: 'About',
 	},

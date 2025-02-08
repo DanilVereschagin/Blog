@@ -1,7 +1,7 @@
 'use client';
 import { Post as PostType } from '@/types/types';
 import { useEffect } from 'react';
-import { usePosts } from '../store';
+import { usePosts } from '@/store';
 import { useShallow } from 'zustand/shallow';
 import { Post } from './Post';
 

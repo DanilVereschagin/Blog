@@ -20,7 +20,7 @@ export const getPostsBySearch = async (searchTerm: string) => {
 	return res.json();
 };
 
-export async function getPost(id: string): Promise<PostType> {
+export async function getPostById(id: string): Promise<PostType> {
 	const res = await fetch(`http://localhost:3300/posts/${id}`, {
 		next: {
 			revalidate: 60,

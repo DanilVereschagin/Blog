@@ -49,8 +49,18 @@ main {
 	font-size: 24px;
 }
 
+.link_auth {
+	right: 3%;
+	position: absolute;
+	text-decoration: none;
+	color: #ffffff;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 24px;
+}
+
 .link:hover {
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 .active {
@@ -96,19 +106,55 @@ main {
 	background-color: #000000;
 	color: #ffffff;
 
-	.link {
-		text-decoration: none;
-		color: #ffffff;
-		font-size: 20px;
-	}
-
 	&:hover {
 		background-color: #353535;
 		border: #000000 1px solid;
+		text-decoration: none;
+	}
+}
 
-		.link {
-			color: #ffffff;
-		}
+.post__body {
+	margin-top: 10px;
+	margin-left: 10px;
+	font-size: 20px;
+	text-wrap: balance;
+}
+
+.post__buttons {
+	display: flex;
+}
+
+.post__button_delete {
+	margin-left: 10px;
+	padding: 5px 10px;
+	font-size: 20px;
+	background-color: #ff0000;
+	color: #ffffff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	text-decoration: none;
+
+	&:hover {
+		background-color: #b80000;
+		color: #ffffff;
+	}
+}
+
+.post__button_edit {
+	margin-left: 10px;
+	padding: 5px 10px;
+	font-size: 20px;
+	background-color: #0077ff;
+	color: #ffffff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	text-decoration: none;
+
+	&:hover {
+		background-color: #0079be;
+		color: #ffffff;
 	}
 }
 
@@ -188,6 +234,54 @@ main {
 			background-color: #000000;
 			color: #ffffff;
 			border: #ffffff 1px solid;
+		}
+	}
+}
+
+.form__create_post {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 400px;
+	padding: 10px;
+	gap: 10px;
+	border-radius: 4px;
+	margin: auto;
+
+	input {
+		width: 90%;
+		padding: 8px;
+		border-radius: 4px;
+		margin-bottom: 10px;
+		font-size: 20px;
+		background-color: #ffffff;
+	}
+
+	textarea {
+		width: 90%;
+		padding: 8px;
+		border-radius: 4px;
+		margin-bottom: 10px;
+		font-size: 20px;
+		background-color: #ffffff;
+		max-width: 90vw;
+	}
+
+	button {
+		width: auto;
+		padding: 8px;
+		border: 1px solid #000000;
+		border-radius: 4px;
+		cursor: pointer;
+		background-color: #000000;
+		color: #ffffff;
+		font-size: 24px;
+
+		&:hover {
+			background-color: #ffffff;
+			color: #000000;
+			border: #000000 1px solid;
 		}
 	}
 }

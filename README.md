@@ -25,4 +25,5 @@ Technology stack:
 - Next-Auth (Google and Credentials)
 - SSG and IRS
 - Image Optimization
-- JSON-server (Only 0.17.4 because the substring search doesn't work.)
+- JSON-server (No more than version 0.17.4)
+- Server Actions

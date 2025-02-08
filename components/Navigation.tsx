@@ -32,12 +32,12 @@ const Navigation = ({ navLinks }: NavProps) => {
 							callbackUrl: '/',
 						})
 					}
-					className='link'
+					className='link_auth'
 				>
 					Sign out
 				</Link>
 			) : (
-				<Link href='/signin' className='link'>
+				<Link href='/signin' className='link_auth'>
 					Sign in
 				</Link>
 			)}

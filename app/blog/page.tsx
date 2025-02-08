@@ -1,5 +1,5 @@
-import { PostList } from '@/components/PostList';
-import { PostSearch } from '@/components/PostSearch';
+import { PostList } from '@/components/Posts/PostList';
+import { PostSearch } from '@/components/Posts/PostSearch';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
